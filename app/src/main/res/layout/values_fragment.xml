@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".screens.ValuesFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                app:tint="@color/green"
+                android:src="@drawable/ic_money_exchange" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/m_regular"
+                    android:paddingStart="30dp"
+                    android:text="@string/stawki"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="28sp"
+                   />
+
+                <Spinner
+                    android:id="@+id/currencyNameSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="30dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="30dp"
+                    android:fontFamily="@font/m_regular"
+                    android:drawablePadding="10dp"
+                    android:text="@string/oficjalne"
+                    android:textAlignment="center"
+                    android:textColor="@color/green"
+                    android:textSize="20sp"
+                    app:drawableBottomCompat="@drawable/dot" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:paddingEnd="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:enabled="false"
+                    app:tint="@color/green"
+                    android:scaleType="fitEnd"
+                    android:layout_gravity="right"
+                    android:src="@drawable/ic_money_exchange"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/m_regular"
+                    android:text="@string/waluty"
+                    android:textAlignment="center"
+                    android:textColor="@color/light_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="40dp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/m_regular"
+                    android:text="@string/warto_24h"
+                    android:textColor="@color/light_gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/currentRecyclerView"
+                android:layout_width="match_parent"
+                android:paddingBottom="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/calculateButton"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="25dp"
+        android:padding="9dp"
+        android:background="@drawable/rounded_rectangle_bg"
+        android:backgroundTint="@color/green_v2"
+        android:src="@drawable/ic_calculate" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/loadingFragment">
+
+    <fragment
+        android:id="@+id/valuesFragment"
+        android:name="com.example.currency.screens.ValuesFragment"
+        android:label="fragment_values"
+        tools:layout="@layout/values_fragment" >
+        <action
+            android:id="@+id/action_valuesFragment_to_calculateFragment"
+            app:destination="@id/calculateFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/calculateFragment"
+        android:name="com.example.currency.screens.CalculateFragment"
+        android:label="fragment_calculate"
+        tools:layout="@layout/calculate_fragment" >
+        <action
+            android:id="@+id/action_calculateFragment_to_valuesFragment"
+            app:destination="@id/valuesFragment"
+            app:popUpTo="@id/app_nav"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="com.example.currency.screens.LoadingFragment"
+        android:label="loading_fragment"
+        tools:layout="@layout/loading_fragment" >
+        <action
+            android:id="@+id/action_loadingFragment_to_valuesFragment"
+            app:destination="@id/valuesFragment"
+            app:popUpTo="@id/app_nav"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+</navigation>

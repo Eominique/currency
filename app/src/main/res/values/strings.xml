@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">currency</string>
+    <string name="usd">USD</string>
+    <string name="_0_11">0.11%</string>
+    <string name="_88_89">88.89</string>
+    <string name="inne_waluty">Inne waluty</string>
+    <string name="loading_data">Loading data...</string>
+    <string name="warto_24h">Wartość | 24h</string>
+    <string name="waluty">Waluty</string>
+    <string name="oficjalne">Oficjalne</string>
+    <string name="stawki">Stawki</string>
+</resources>
